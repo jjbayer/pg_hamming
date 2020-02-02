@@ -6,7 +6,7 @@ PG_MODULE_MAGIC;
 PG_FUNCTION_INFO_V1(hamming_distance);
 
 
-inline char count_nonzero_bits(char);
+inline char count_nonzero_bits(unsigned char);
 
 
 Datum
@@ -27,7 +27,7 @@ hamming_distance(PG_FUNCTION_ARGS)
 }
 
 
-char count_nonzero_bits(char byte) 
+char count_nonzero_bits(unsigned char byte)
 {
     char count = 0;
     while( byte ) {
